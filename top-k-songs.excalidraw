@@ -1,7 +1,7 @@
 {
   "type": "excalidraw",
   "version": 2,
-  "source": "https://excalidraw.com",
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
   "elements": [
     {
       "type": "text",
@@ -1159,8 +1159,8 @@
     },
     {
       "type": "text",
-      "version": 3837,
-      "versionNonce": 767656455,
+      "version": 3838,
+      "versionNonce": 306967682,
       "index": "b1n",
       "isDeleted": false,
       "id": "ITa5faRJvonp0UOgi6usS",
@@ -1181,12 +1181,12 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [],
-      "updated": 1728324380392,
+      "updated": 1746460254056,
       "link": null,
       "locked": false,
       "fontSize": 36,
       "fontFamily": 6,
-      "text": "- This is an high intensive write application and we don't need ACID transaction support the first aggregation, so \nDynamo DB would be a nice fit here.\n- Data needs to be processed during write operation, in order to guarantee fast reads.\n- Flink can be used to aggregates viewed events on a minute granularity and write it to DDB. Flink comes with \nsnapshot and checkpoint to start from a saved state in case of failures.\n- Leverage CDC (Change Data Capture) to rollup data to hour, day, month and all-time. Using an AWS lambda, we \ncan process the aggregated data on a minute granularity and write them to Redis sorted set. We would need to \nhave different sorted set for every hour, every day, every month and all time. \n- Since a redis cache can fail, we should think about storing the data also on a SQL database so, we can recreate \nthe Redis sorted set in an event of failures. For this reason, we can create SQL tables for the various aggregation \nand store the aggregate there. We need a SQL databse because for every song id we need to read the value, \nupdate it and write it back so we need strong consistency guarantees for this.\n- Scheduled process that run on a schedule and deletes old sorted set and old SQL database tables.\n\nDeep Dive\n\nIf this system design was for a system with many more songs (or videos, e.g youtube) or many more daily active \nusers, then we need to look for a sharding solution for the Redis sorted set, as a single Redis cluster can struggle \nto keep up with the load (QPS). There are 2 ways to shard a Redis sorted set:\n* Fixed\n* Hash partitions ",
+      "text": "- This is an high intensive write application and we don't need ACID transaction support the first aggregation, so\nDynamo DB would be a nice fit here.\n- Data needs to be processed during write operation, in order to guarantee fast reads.\n- Flink can be used to aggregates viewed events on a minute granularity and write it to DDB. Flink comes with\nsnapshot and checkpoint to start from a saved state in case of failures.\n- Leverage CDC (Change Data Capture) to rollup data to hour, day, month and all-time. Using an AWS lambda, we\ncan process the aggregated data on a minute granularity and write them to Redis sorted set. We would need to\nhave different sorted set for every hour, every day, every month and all time. \n- Since a redis cache can fail, we should think about storing the data also on a SQL database so, we can recreate\nthe Redis sorted set in an event of failures. For this reason, we can create SQL tables for the various aggregation\nand store the aggregate there. We need a SQL databse because for every song id we need to read the value,\nupdate it and write it back so we need strong consistency guarantees for this.\n- Scheduled process that run on a schedule and deletes old sorted set and old SQL database tables.\n\nDeep Dive\n\nIf this system design was for a system with many more songs (or videos, e.g youtube) or many more daily active\nusers, then we need to look for a sharding solution for the Redis sorted set, as a single Redis cluster can struggle\nto keep up with the load (QPS). There are 2 ways to shard a Redis sorted set:\n* Fixed\n* Hash partitions ",
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
