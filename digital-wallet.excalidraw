@@ -1,7 +1,7 @@
 {
   "type": "excalidraw",
   "version": 2,
-  "source": "https://excalidraw.com",
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
   "elements": [
     {
       "type": "text",
@@ -394,10 +394,6 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [
-        {
-          "id": "HS6te3Rz6Y9EXGx5Pafnb",
-          "type": "arrow"
-        },
         {
           "id": "1mBKiAjrejEh-zajJlosI",
           "type": "arrow"
@@ -855,12 +851,7 @@
       ],
       "frameId": null,
       "roundness": null,
-      "boundElements": [
-        {
-          "id": "QEAzazN01-g-R4qEE_t-7",
-          "type": "arrow"
-        }
-      ],
+      "boundElements": [],
       "updated": 1741035607931,
       "link": null,
       "locked": false
@@ -1366,10 +1357,6 @@
       "frameId": null,
       "roundness": null,
       "boundElements": [
-        {
-          "id": "QEAzazN01-g-R4qEE_t-7",
-          "type": "arrow"
-        },
         {
           "id": "1mBKiAjrejEh-zajJlosI",
           "type": "arrow"
@@ -1979,7 +1966,7 @@
       "version": 18,
       "versionNonce": 1623614381,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1740941586427,
       "link": null,
       "locked": false,
@@ -2016,7 +2003,7 @@
       "version": 139,
       "versionNonce": 444798595,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1740941791017,
       "link": null,
       "locked": false,
@@ -2035,7 +2022,7 @@
       "type": "text",
       "x": 283.2184925679742,
       "y": 813.0943623681248,
-      "width": 888.2786254882812,
+      "width": 904.7586059570312,
       "height": 54,
       "angle": 0,
       "strokeColor": "#1e1e1e",
@@ -2050,20 +2037,20 @@
       "index": "b1t",
       "roundness": null,
       "seed": 1883361869,
-      "version": 151,
-      "versionNonce": 1752820365,
+      "version": 153,
+      "versionNonce": 1028242273,
       "isDeleted": false,
-      "boundElements": null,
-      "updated": 1740941787828,
+      "boundElements": [],
+      "updated": 1771932528467,
       "link": null,
       "locked": false,
-      "text": "Note: Api Gateway extra userId from access token after validation, and put it in request body when\nforwarding the request",
+      "text": "Note: Api Gateway extract userId from access token after validation, and put it in request body when\nforwarding the request",
       "fontSize": 20,
       "fontFamily": 6,
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "Note: Api Gateway extra userId from access token after validation, and put it in request body when\nforwarding the request",
+      "originalText": "Note: Api Gateway extract userId from access token after validation, and put it in request body when\nforwarding the request",
       "autoResize": true,
       "lineHeight": 1.35
     },
@@ -2090,7 +2077,7 @@
       "version": 5354,
       "versionNonce": 1323297500,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1741205235313,
       "link": null,
       "locked": false,
@@ -2127,7 +2114,7 @@
       "version": 109,
       "versionNonce": 396314189,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1741035612913,
       "link": null,
       "locked": false,
@@ -2229,7 +2216,7 @@
       "version": 2973,
       "versionNonce": 1898421348,
       "isDeleted": false,
-      "boundElements": null,
+      "boundElements": [],
       "updated": 1741205404054,
       "link": null,
       "locked": false,
